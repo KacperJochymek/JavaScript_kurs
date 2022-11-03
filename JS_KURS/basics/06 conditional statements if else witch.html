@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let data =5;
+
+        if(data > 5) {
+            console.log("Liczba w data jest wieksza niz 5");
+        }
+
+        if(data <5){
+            console.log("liczba w data jest mniejsza niz 5");
+        }
+
+        if(data == 5){
+            console.log("liczba w data jest rowna 5");
+        }
+
+        let age = 18;
+
+        if(age >= 18){
+            console.log("masz wiecej niz 18")
+            }
+        if(age < 18)
+            {
+        console.log("nie masz 18")
+        console.log("musi poczekac do 18")
+            }
+
+            age = 12;
+
+            if(age>= 18){
+                console.log("moze glosowac");
+            }else{
+                console.log("nie moze glosowac");
+            }
+
+            let sportRanking = 4;
+
+            if(sportRanking == 1) {
+                console.log("pierwsze miejsce!");
+            }else if(sportRanking ==2){
+                console.log("drugie miejsce");
+            }else if(sportRanking == 3){
+                console.log("Trzecie miejsce!");
+            }else {
+                console.log("Niestety brak medalu :(");
+            }
+
+
+            const x = 110;
+            const y =99;
+            
+            if(x>y)
+            { // true
+                console.log("x jest wieksze od y");
+            } else { // false
+                console.log("X jest mniejsze od y");
+            }
+
+            let topSpeed = 520;
+
+            switch(topSpeed){
+                case 100: 
+                    console.log("Mała prędkość maksymalna");
+                    break;
+                case 150:
+                    console.log("Predkosc 150km/h");
+                    break;
+                case 200:
+                    console.log("Szybko 200km/h");
+                    break;
+                case 250:
+                    console.log("Wow 250km/h");
+                    break;
+                case 300:
+                    console.log("300km/h");
+                    break;
+                case 310:
+                case 320:
+                case 330:
+                    console.log("Predkosc powyzej 300km/h");
+                    break;
+                default:
+                    console.log(" Brak informacji o tej predkosci");
+            }
+
+           // console.log("dalsza czesc programu");
+    </script>
+</body>
+</html>
