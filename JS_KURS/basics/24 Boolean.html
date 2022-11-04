@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //boolean - wartości logiczne: tru albo false (słowa kluczowe)
+
+        let flag = true;
+
+        if(flag == true)
+        {
+            console.log("prawda!");
+        }
+
+        if(flag == false){ // nie wykona się, bo flag ma false
+            console.log("prawda!");
+        }
+
+
+
+        if(flag) console.log("Skrótowo i prawda!");
+        //wykrzyknik odwraca wartość logiczną
+        flag = false;
+        if(!flag) console.log("Skrótowo i falsz!");
+        console.log(true);
+        console.log(!true);// dostajemy false
+
+
+        console.log(false);
+        console.log(!false);// dostajemy true -- odwrócona
+
+        if(4 > 1){ // wynik to true
+            console.log(" 4 > 1");
+        
+        }
+
+
+        // falsy values -- "fałszywe wartości"!!!
+
+        let data = "";
+        if(data){// data bedzie zamienione na boolean, nazywamy to kowersja z jednego typu wartosci na inny 
+            //pusty string został skonwertowany na boolean fałsz
+            console.log("prawda");
+        }
+
+        let data2 ="tekst";
+        if(data){
+            console.log("prawda");
+        }
+
+    </script>
+</body>
+</html>

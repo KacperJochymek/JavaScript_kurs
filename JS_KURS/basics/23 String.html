@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //String - inaczej zwany jest literały znakowe lub literały łacuchowe, ciąg znaków UTF-16
+
+        const s1 = 'to jest tekst';
+        const s2 = "to tez jest tekst";
+
+
+
+        const num =78;
+        //literał szablonu
+        const s3 = `
+            String w
+            wielu ${num}
+            liniach
+            wyrażenia js: ${1 + 2 +3 }
+        `;
+
+
+        console.log(s3);
+
+        console.log("tekst".length); // 5 znaków
+        console.log("".length); // 0 znaków, może być pusty
+
+        console.log("tekst"[2]); // k - po inteksie pobierzemy znak
+        console.log( s3[ s3.length - 1] ); // 6
+
+        console.log(s3.charAt(15)); // r 
+        console.log(s3.charCodeAt(15)); // 114
+
+        //wyszukiwanie słów w tekscie
+        let simpleTekst = "Ala ma kota a Ania ma psa";
+
+        let pos = simpleTekst.indexOf("Ania");
+        console.log(pos); // Ania jest pod 15 ideksem, licząc od 0
+
+        pos = simpleTekst.lastIndexOf("ma");
+        console.log(pos); // 20
+
+        //drugi argument od którego miejsca ma być wyszukiwane
+
+        pos =simpleTekst.indexOf("ma", 6); // 20
+        console.log(pos);
+
+        pos = simpleTekst.lastIndexOf("ma", 10); // 4 indeks
+        console.log(pos);
+
+        //trim() - wycina białe znaki z początku i końca łańcucha
+        console.log("    Tekst    coś   tam   ".trim() );
+        console.log(`
+        
+        test
+
+
+        `.trim()); //'test'
+
+
+        //toUpperCase() -- wszystkie litery będą powiększone
+
+        console.log("ala".toUpperCase()); // ALA
+
+        //toLowerCase()
+        console.log("AUTO".toLowerCase()); //auto
+
+        //łączenie łańcuchów znaków
+        const str1 = "something";
+        const resultStr = "text"+ str1;
+        console.log(resultStr);
+
+
+        //concat -- łączenie tekssu
+    
+        let str2 = "test".concat(" other test");
+        console.log(str2);
+         
+
+        //Pobieranie fragmentu ze stringa (slice)
+
+        let str5 = "0123456789";
+
+        console.log(str5.slice(2)); //23456789
+        console.log(str5.slice(4, 8)); //4567
+        console.log(str5.slice(4, 9)); //45678
+        console.log(str5.slice(-3)); // 789
+        console.log(str5.slice(-6, -2)); //4567
+
+        //substr
+
+        console.log(str5.substr(0)); //0123456789
+        console.log(str5.substr(5)); //56789
+        console.log(str5.substr(5,3 )); //567
+        console.log(str5.substr(-7,2 )); //34
+
+        //Split() -- dzieli łańcuch znaków ze względu na przekazany znak
+
+        let str6 = "a1 b2 c3 d4 e ";
+
+        let dataStr6 = str6.split(" ");
+        console.log(dataStr6); // ['a1', 'b2', 'c3', 'd4', 'e', '']
+
+
+
+        //replace() -- zamienia słowa w stringu
+
+        let str7 = "Ala ma kota";
+
+        let str8 = str7.replace("kota", "psa");
+        console.log(str8);
+
+
+        //Mutowalność vs niemutowalność w JS tylko tablice i obiekty są mutowalne czyli mogą być zmieniane
+        // Prymitywy jak string mogą przyjmować różne wartości, ale przy każdej zmianie otrzymujemy nową wartość 
+
+        let str9 = "Tekst";
+
+        str9[0] = "A";
+        console.log(str9); // tekst, string i inne prymitywy są niemutowalne 
+        let str10 = str9.replace("T", "A");
+        console.log(str10); //Aekst
+
+        // Tablica jest mutowalna podobnie jako obiekty
+        // przy zmianie wartosci nie powstaje nowy obiekt tylko modyfikowany jest już istniejący
+
+        let arr= ["T", "E","K", "S", "T"];
+
+        arr[0]="A"; // tablica jest mutowalna, czyli da się zmodyfikować
+
+        arr[0]= "A";
+        console.log(arr);
+
+
+        let obj = {a: 1};
+        obj.a = 7;
+        console.log(obj); // a ==7  obiekt jest mutowalny
+
+
+        
+
+    </script>
+</body>
+</html>
