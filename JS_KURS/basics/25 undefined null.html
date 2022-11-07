@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a; // zmienna jest zadeklarowana
+        console.log(a); // undefined, nie ma wartosci w zmiennej
+
+        if(a==undefined) console.log("brak");
+        /*
+        b;
+        błąd:
+        Uncaught reference error: b is not defined, 
+        w praktyce zmienna jest niezadeklarowana, bo nie ma "let"
+        */
+
+        console.log(typeof b); // undefined
+
+        //null - intencjonalne wskazanie ze zmienna nie ma wartosci
+
+        let test= 5;
+        console.log(test); // 5
+
+        test = null;
+        console.log(test); // null
+        console.log(typeof null); // "object"
+
+        // null i undefined - falsy values
+
+        if(null) console.log("nie wykona sie, bo null na false");
+        if(undefined) console.log("nie wykona sie, bo null na false");
+
+
+        //porównanie proste
+        if(null == undefined){
+            console.log("wykona sie bo true");
+        }
+
+
+        //porównanie ścisłe
+        //porównanie typu jak i wartosci, bo dwa rozne typy
+        if(null === undefined){
+            console.log("nie wykona sie");
+        }
+
+    </script>
+</body>
+</html>

@@ -50,10 +50,44 @@
             console.log("prawda");
         }
 
-        let data2 ="tekst";
+        let data2 ="tekst"; // thrutly values
         if(data){
+            //konwersja - zamiana slowa na liczbę (ParseInt)
+            //wypełniony string skonwertowany na boolean czyli na prawdę
             console.log("prawda");
         }
+
+
+        //falsy values zawsze konwertowane są na false!
+
+        //""pusty string
+        // 0, -0
+        // 0n // BigInt
+        //NaN
+        // null/
+        // undefined
+        // false
+
+        let data3 = null;
+
+        if(data3){ //null skonwertowany na false
+            console.log("data3 ma wartosc true");
+        }else{
+            console.log("data3 to false ");
+        }
+        //thrutly values - prawdziwe wartości
+        // "tekst"
+        // -1, 1 , 34 -rożne od 0
+        // [], [4,3,2], [false, false]
+        // {}{a:1}
+        // function, window , {flag: false}
+        // function test() {}
+
+        let test = [false];
+        if(test) console.log("prawda", test);
+
+
+
 
     </script>
 </body>

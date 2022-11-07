@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tablice to uporządkowana kolekcja elementów
+        // nie są typem, a obiektem
+        // mogą przechowywywać dowolne typy: proste i złożone
+
+        let a = [];
+        let b =[22, "tekst", {a:1}, [5,4,3], function(){}, null];
+        console.log(b);
+        console.log(b[6]);//undefined
+
+        console.log(b[b.length-1]); // ostatni element to null
+        console.log(b[0]); // 22
+
+        b[2] = 99;
+        console.log(b); // tablice są modyfikalne
+
+        let c = new Array(12, "tekst", 9);
+        console.log(c); //
+
+        let d= Array(1,2,3);
+        console.log(d);
+
+        let e = [];
+        e[0] = "test";
+        e[1] = "test";
+        e[2] = "test";
+        e[e.length] = "test4";
+        e.push("test5"); // wrzuca na koniec tablicy element
+        console.log(e);
+
+
+        let f =[0,1,2,3,4,5,6,7];
+        console.log(f);
+        f.length = 4;
+        console.log(f); // obcinamy ilosc elementow w tablicy
+
+        delete f[1];
+        console.log(f);
+        console.log(f[1]); // undefined
+
+
+        console.log( 1 in f); // false, indeks nie istnieje
+        console.log(2 in f); // true
+
+
+        let g = Array(5).fill(7); // stwórz tablice 5 el z wart 7
+        console.log(g);
+
+
+        // iteracja - przechodzenie po elementach tablicy
+
+        let h = [99, 56, 45, "tekst"];
+
+        for(let i = 0; i<h.length;i++){
+            console.log(h[i]);
+        }
+
+        let arr1 = ["el1", "el2", "el3"];
+        arr1.forEach(function(item, index, array){
+            console.log(item, index);
+        }); 
+
+        let arr2 = arr1.concat([1,2,3]);
+        console.log(arr2);
+
+        let arr3 = arr1.concat([5,6], [10,11,12]);
+        console.log(arr3);
+
+        // join
+        let strFromArr = arr1.join();
+        console.log(strFromArr);
+
+        let strFromArr2 = arr1.join("|");
+        console.log(strFromArr2);
+
+        // reverse - odwraca
+
+        let arr4 = [1,2,3,4];
+        arr4.reverse();
+        console.log(arr4); // tablica odwrocona
+
+
+        // push - wrzuca ostatni element do tablicy
+
+        arr4.push(99);
+        console.log(arr4);
+
+        // pop - pobiera ostatni element z tablicy
+
+        let arrEl = arr4.pop();
+        console.log(arrEl);
+        console.log(arr4);
+
+        
+    </script>
+</body>
+</html>
